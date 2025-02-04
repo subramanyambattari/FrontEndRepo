@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: lightgoldenrodyellow;
+        border: 4px solid green;
+        display: flex;
+        /* padding: 20px; */
+        justify-content: flex-start;
+        align-items: center; 
+        /* height: 600px */
+        min-height: 400px;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+    .item{
+        background-color: blueviolet;
+        border: 2px solid red;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* flex-shrink: 1;
+        flex-grow: 1; */
+    }
+    #i1{
+        /* flex-grow: 1;
+        flex-shrink: 5;
+        align-self: flex-start; */
+        margin-right: auto;
+    }
+    @media(max-width:400px){
+        .container{
+            flex-wrap: wrap;
+            background-color: green;
+        }
+    }
+</style>
+<body>
+    <div class="container"></div>
+    <div class="item" id="i1">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+</body>
+</html>

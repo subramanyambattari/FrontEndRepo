@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url(background.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    div{
+        background-color: rgba(255, 255, 255, 0.751);
+        border-radius: 10px;
+        padding: 50px;
+        width: 400px;
+    }
+    input[type="text"], input[type="email"],input[type="password"],select, textarea{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    input[type="submit"], input[type="reset"]{
+        background-color: rgb(231, 19, 19);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        translate:0.5s;
+    }
+    input:focus, text-area:focus, select:focus{
+        background-color: antiquewhite;
+
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover{
+        background-color: rgb(253, 23, 23);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    h2{
+        text-align: center;
+    }
+</style>
+<body>
+    <div>
+        <form action="abc.php" method="post">
+            <h2>Welcome To FaceBook Web Application</h2>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="First name and Last name" id="name"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="name"><br>
+            <label for="cities">Select City</label>
+            <select name="cities" id="cities">
+                <option value="Select">Select</option>
+                <option value="Ap">Ap</option>
+                <option value="Ts">Ts</option>
+                <option value="Tn">Tn</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+            </select><br>
+            <label for="address">Address:</label>
+            <textarea name="" id="" cols="30" rows="5"></textarea><br>
+                <label for="gender">Gender:</label>
+                <input type="radio" value="male"> Male
+                <input type="radio" value="female"> Female
+                <input type="radio" value="others"> Others<br>
+            <label for="password">Password</label>
+            <input type="password"><br>
+            <label for="upload">Upload file:</label>
+            <input type="file"><br> <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+</html>
