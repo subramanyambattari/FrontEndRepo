@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden; /* Prevents full page scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: block;
+    padding: 10px 25px;
+    background-color: greenyellow;
+    color: ghostwhite;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2px 35%;
+}
+
+header li {
+    list-style: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 20px;
+    padding: 10px 25px;
+    height: calc(100vh - 100px); /* Adjust based on header height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Position the first two cards in the first column */
+main .card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+main .card:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 20px;
+}
+
+/* Position the third card at the top of the second column */
+main .card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+main .card {
+    padding: 10px 20px;
+    margin: 20px;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #ccc;
+    background-color: #ffffff;
+    width: 400px; 
+    height: 200px;
+
+}
+
+main .card h2 {
+    padding: 12px;
+    color: green;
+}
+
+main .card h3 {
+    color: black;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem; /* Space between social links */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
